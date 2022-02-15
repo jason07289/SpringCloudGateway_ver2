@@ -17,8 +17,8 @@ public class UserServiceApplication {
 		SpringApplication.run(UserServiceApplication.class, args);
 	}
 	
-	@GetMapping("/info")
-    public String info(@Value("${}") String port) {
+	@GetMapping("/user/info")
+    public String info(@Value("${server.port}") String port) {
         return "User 서비스의 기본 동작 Port: {" + port + "}";
     }
 }
